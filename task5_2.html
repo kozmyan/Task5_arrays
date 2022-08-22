@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+ 
+    <script>
+  
+        arr = [];
+        i = 0;
+        br = true;
+        max=0;
+        
+        do {
+            n = prompt(`Введите ${i+1}-e значение для элемента массива`);
+            if (n === null || n === "") br = false;
+            else {
+                arr[i] = +n;
+                i++;
+            }
+        }
+        while (br == true);
+       
+        max = Math.max(...arr);
+        ind = arr.findIndex(i => i == max); 
+        
+        alert(`Максимальное значение массива: ${max}`);
+        alert(`Номер максимального значения: ${ind+1}`);
+        
+    </script>
+
+</body>
+
+</html>
