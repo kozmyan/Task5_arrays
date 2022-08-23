@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .userMenu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #43aee3;
+        margin-top: 5%;
+        width: auto;
+        height: 50px;
+    }
+
+    .userMenu > div{
+        padding-left: 2%;
+    }
+
+    .userMenu > div > a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .userMenu > div > a:hover {
+        color: #fb9c0a;
+        text-decoration: none;
+    }
+    
+    
+</style>
+</head>
+
+<body>
+
+<form name="menu">
+    <label>Пункты меню:</label>
+    <input type="text" id="arrMenu" name="arr"> <br/><br/>
+    <label>Цвет текста:</label> 
+    <input type="color" id="textColor" value="#ffffff"> <br/><br/>
+    <label>Цвет фона:</label> 
+    <input type="color" id="backColor" value="#43aee3"> <br/><br/>
+    <label>Цвет hover:</label>  
+    <input type="color" id="hoverColor" value="#fb9c0a"> <br/><br/>
+    <input type="button" value="Создать меню" onclick="create()">
+</form>
+
+<div class="userMenu">
+    <!-- <div><a href="img/1.jpg">Главная</a></div>
+    <div><a href="img/2.jpg">О компании<a></div>
+    <div><a href="img/3.jpg">Новости</a></div> -->
+</div>
+ 
+    <script>
+
+let elemMenu = [];
+function create(){
+    let arrMenu = menu.arr.value;
+    elemMenu = arrMenu.split(", ");
+    console.log(elemMenu);
+}
+create();
+
+
+
+    </script>
+
+</body>
+
+</html>
